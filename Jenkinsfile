@@ -3,12 +3,12 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'mvn clean package'
+        sh './mvnw clean package'
       }
     }
     stage('deploy') {
       steps {
-        sh 'mvn fabric8:deploy'
+        sh './mvnw fabric8:deploy'
       }
     }
   }
