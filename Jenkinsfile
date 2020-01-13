@@ -8,7 +8,7 @@ pipeline {
     }
     stage('deploy') {
       steps {
-        sh './mvnw fabric8:deploy'
+        sh 'chmod 755 mvnw && ./mvnw fabric8:deploy'
       }
     }
   }
